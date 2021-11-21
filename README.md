@@ -60,4 +60,21 @@ The Complete JavaScript Course 2022: From Zero to Expert! by Jonas Schmedtmann
 - Callback Queue
 - Event Loop
 
+### 91. Execution Contexts and The Call Stack
+
+1. Execution of global execution context (for top-level code)
+2. Execution of top-level code (inside global EC)
+3. Execution of functions and waiting for callbacks
+
+- Execution Contexts(EC)
+  - It stores all the necessary infomation for some code to be executed
+- Inside Execution Context
+  1. Variable environment
+     - let, const and var declarations
+     - functions
+     - arguments object
+  2. Scope chain
+  3. `this` keyword
+  - Arrow functions to not have arguments object and this keyword!
+
 </details>
