@@ -27,4 +27,37 @@ The Complete JavaScript Course 2022: From Zero to Expert! by Jonas Schmedtmann
 8. \*Single-threaded
 9. \*Non-blocking event loop
 
+### 90. The JavaScript Engine and Runtime
+
+- Compliation
+  - Entire code is converted into machine code at once, and written to a binary file that can be executed by a computer.
+- Interpretation: Old Javascript
+  - Interpreter runs through the source code and executes it line by line
+- Just-in-time (JIT) compliation: Modern Javascript
+  - Entire code is converted into machine code at once, then executed immediately
+
+#### JS Engine
+
+1. Parsing (AST: Abstract Syntax Tree)
+2. Compliation: Just-in-time compliation
+3. Execution: Happens in call stack
+4. Optimization: During execution
+   - Go to 2. Compliation
+
+#### Runtime in the browser
+
+- JS Engine - Heap / Call Stack
+- Web APIs - Dom, Timers, Fetch API, and Etc.
+- Callback Queue - Click, Timer, Data, and Etc.
+- Event Loop
+  - Essential for non-blocking concurrency model
+  - Between Callback Queue and Call Stack
+
+#### Runtime in Node.js
+
+- JS Engine
+- C++ Bindings & Thread Pool
+- Callback Queue
+- Event Loop
+
 </details>
