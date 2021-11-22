@@ -84,4 +84,24 @@ The Complete JavaScript Course 2022: From Zero to Expert! by Jonas Schmedtmann
 var millenial = true;
 ```
 
+### 94. Variable Environment: Hoisting and The TDZ
+
+- Hoisting: **Before execution**`, code is scanned for variable declarations, and for each variable, a new property is created in the **variable environment object**
+
+|                       | hoisted? |     initial value      |         scope          |
+| :-------------------: | :------: | :--------------------: | :--------------------: |
+| function declarations |  ✅ Yes  |    Actual function     | Block (in strict mode) |
+|    `var` variables    |  ✅ Yes  |       undefined        |        Function        |
+|   `let` and `const`   |  ⛔️ No  |  <uninitialized>, TDZ  |         Block          |
+| function expressions  |          |       Depends if       |                        |
+|  and arrow functions  |          | using var or let/const |                        |
+
+- TDZ (Temporal Dead Zone): lines above its declaration
+- Why TDZ?
+  - Make it easier to avoid and catch errors
+  - Makes `const` variables actually work
+- Why Hoisting?
+  - Using functions before actual declaration
+  - `var` hoisting is just a byproduct (javascript wasn't intended to become a huge PL as it is today)
+
 </details>
