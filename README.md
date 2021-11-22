@@ -77,4 +77,11 @@ The Complete JavaScript Course 2022: From Zero to Expert! by Jonas Schmedtmann
   3. `this` keyword
   - Arrow functions to not have arguments object and this keyword!
 
+### 93. Scoping in Practice
+
+```js
+// var is in a function scope, not a global scope
+var millenial = true;
+```
+
 </details>
