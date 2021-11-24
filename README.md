@@ -111,6 +111,7 @@ _this_ in
 1. Method: Object that is calling the method
 2. Simple function call: undefined in strict mode, otherwise window (in the browser)
 3. Arrow functions: this of surrounding function (lexical this)
+   - arrow function does own _this_ keyword
 4. Event listener: DOM Element that the handler is attached to
 
 _this_ does NOT point to the function itself, and also NOT the its variable environment
