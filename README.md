@@ -104,4 +104,15 @@ var millenial = true;
   - Using functions before actual declaration
   - `var` hoisting is just a byproduct (javascript wasn't intended to become a huge PL as it is today)
 
+### 96. The this Keyword
+
+_this_ in
+
+1. Method: Object that is calling the method
+2. Simple function call: undefined in strict mode, otherwise window (in the browser)
+3. Arrow functions: this of surrounding function (lexical this)
+4. Event listener: DOM Element that the handler is attached to
+
+_this_ does NOT point to the function itself, and also NOT the its variable environment
+
 </details>
