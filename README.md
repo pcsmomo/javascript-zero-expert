@@ -116,4 +116,24 @@ _this_ in
 
 _this_ does NOT point to the function itself, and also NOT the its variable environment
 
+### 99. Primitives vs. Objects (Primitive vs. Reference Types)
+
+1. Primitives
+   - Primitive Types
+   - Stored in _Call Stack_
+     - Number
+     - String
+     - Boolean
+     - Undefined
+     - Null
+     - Symbol
+     - BigInt
+2. Objects
+   - Reference Types
+   - Stored in _Heap_
+     - Object literal
+     - Arrays
+     - Functions
+     - Many more...
+
 </details>
