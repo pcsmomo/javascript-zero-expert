@@ -21,18 +21,35 @@ calcAgeArrow(1991);
 
 console.log('== "this" in method ==');
 const jonas = {
+  firstName: 'Jonas',
   year: 1991,
   calcAge: function () {
     console.log(this);
     console.log(2037 - this.year);
+
+    // // Solution 1
+    // const self = this;
+    // // function expression
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
+
+    // Solution 2
+    // arrow function
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
   },
-  calcAgeArrow: () => {
+  greet: () => {
     console.log(this);
-    console.log(2037 - this.year);
+    console.log(`Hey ${this.firstName}`);
   },
 };
 jonas.calcAge();
-jonas.calcAgeArrow();
+jonas.greet();
 
 console.log('== Method borrwoing ==');
 // method borrowing
@@ -49,17 +66,47 @@ matilda.calcAge();
 console.log('== "this" in method in a function ==');
 const testFn = () => {
   const max = {
+    firstName: 'Max',
     year: 1991,
     calcAge: function () {
       console.log(this);
       console.log(2037 - this.year);
     },
-    calcAgeArrow: () => {
+    greet: () => {
       console.log(this);
-      console.log(2037 - this.year);
+      console.log(`Hey ${this.firstName}`);
     },
   };
   max.calcAge();
-  max.calcAgeArrow();
+  max.greet();
 };
 testFn();
+
+// Function expression
+const isMillenial = function () {
+  console.log(this); // undefined
+  console.log(this.year >= 1981 && this.year <= 1996);
+};
+// isMillenial();
+
+// Arrow function
+const isMillenialArrow = () => {
+  console.log(this); // window
+  console.log(this.year >= 1981 && this.year <= 1996);
+};
+isMillenialArrow();
+
+// Argument keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
+
+const addArrow = (a, b) => {
+  // Arrow function doesn't have arguments
+  console.log(arguments);
+  return a + b;
+};
+addArrow(2, 5);
